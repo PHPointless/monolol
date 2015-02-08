@@ -17,7 +17,10 @@ class Confuse implements Lolifier
         $this->ensureLevelKeyExists($record);    
         
         $availableLevels = $this->filterMonologLevels($record);
-        $record['level'] = $this->randomlyChooseLevel($availableLevels);
+        $randomKey = array_rand($availableLevels);
+        
+        $record['level'] = $availableLevels[$randomKey];
+        $record['level_name'] = $randomKey;
             
         return $record;
     }
@@ -35,12 +38,5 @@ class Confuse implements Lolifier
         return array_filter(MonologLevel::getLevels(), function($level) use ($record) {
             return $record['level'] !== $level;
         });
-    }
-    
-    private function randomlyChooseLevel(array $availableLevels)
-    {
-        $randomKey = array_rand($availableLevels);
-        
-        return $availableLevels[$randomKey];
     }
 }

@@ -22,13 +22,22 @@ class ConfuseTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider testLevelConfuseProvider
      */
-    public function testLevelConfuse($level)
+    public function testLevelConfuse($label, $level)
     {
-        $record = array('level' => $level);
+        $record = array(
+            'level' => $level,
+            'level_name' => $label,
+        );
         $confusedRecord = $this->confuse->lolify($record);
         
         $this->assertNotSame($level, $confusedRecord['level']);
-        $this->assertTrue(in_array($confusedRecord['level'], MonologLevel::getLevels()));
+        $this->assertNotSame($label, $confusedRecord['level_name']);
+        
+        $monologLevels = MonologLevel::getLevels();
+        
+        $this->assertTrue(in_array($confusedRecord['level'], $monologLevels));
+        $this->assertTrue(array_key_exists($confusedRecord['level_name'], $monologLevels));
+        $this->assertSame($monologLevels[$confusedRecord['level_name']], $confusedRecord['level']);
     }
     
     public function testLevelConfuseProvider()
@@ -37,7 +46,7 @@ class ConfuseTest extends \PHPUnit_Framework_TestCase
         
         foreach(MonologLevel::getLevels() as $label => $level)
         {
-            $providedTests[$label] = array($level);
+            $providedTests[$label] = array($label, $level);
         }
         
         return $providedTests;
