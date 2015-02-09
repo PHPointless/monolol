@@ -9,26 +9,26 @@ class HashTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider testHandlingProvider
      */
-    public function testHandling($level, $expected)
+    public function testHandling($level)
     {
         $record = array('level' => $level);
 
         $lolifier = new Hash();
 
-        $this->assertSame($expected, $lolifier->isHandling($record));
+        $this->assertTrue($lolifier->isHandling($record));
     }
 
     public function testHandlingProvider()
     {
         return array(
-            'debug' => array(Logger::DEBUG, true),
-            'info' => array(Logger::INFO, true),
-            'notice' => array(Logger::NOTICE, true),
-            'warning' => array(Logger::WARNING, true),
-            'error' => array(Logger::ERROR, true),
-            'critical' => array(Logger::CRITICAL, true),
-            'alert' => array(Logger::ALERT, true),
-            'emergency' => array(Logger::EMERGENCY, true),
+            'debug' => array(Logger::DEBUG),
+            'info' => array(Logger::INFO),
+            'notice' => array(Logger::NOTICE),
+            'warning' => array(Logger::WARNING),
+            'error' => array(Logger::ERROR),
+            'critical' => array(Logger::CRITICAL),
+            'alert' => array(Logger::ALERT),
+            'emergency' => array(Logger::EMERGENCY),
         );
     }
 
