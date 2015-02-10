@@ -6,30 +6,9 @@ use Monolog\Logger;
 
 class HashTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @dataProvider testHandlingProvider
-     */
-    public function testHandling($level)
+    public function testHandling()
     {
-        $record = array('level' => $level);
-
-        $lolifier = new Hash();
-
-        $this->assertTrue($lolifier->isHandling($record));
-    }
-
-    public function testHandlingProvider()
-    {
-        return array(
-            'debug' => array(Logger::DEBUG),
-            'info' => array(Logger::INFO),
-            'notice' => array(Logger::NOTICE),
-            'warning' => array(Logger::WARNING),
-            'error' => array(Logger::ERROR),
-            'critical' => array(Logger::CRITICAL),
-            'alert' => array(Logger::ALERT),
-            'emergency' => array(Logger::EMERGENCY),
-        );
+        $this->assertTrue((new Hash())->isHandling(array()));
     }
 
     public function testHash()
