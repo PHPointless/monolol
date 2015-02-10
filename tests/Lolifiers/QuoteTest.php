@@ -9,9 +9,6 @@ use Monolog\Logger;
 
 class QuoteTest extends \PHPUnit_Framework_TestCase
 {
-    private
-        $confuse;
-
     /**
      *
      * @dataProvider providerTestHandling
