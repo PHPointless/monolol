@@ -26,14 +26,4 @@ class WarpTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('DateTime', $lolifiedRecord['datetime']);
         $this->assertGreaterThan($dateTime->getTimeStamp(), $lolifiedRecord['datetime']->getTimeStamp());
     }
-    
-    /**
-     * @expectedException \RuntimeException
-     */
-    public function testInvalidRecord()
-    {
-        $record = array();
-        
-        $this->warp->lolify($record);
-    }
 }

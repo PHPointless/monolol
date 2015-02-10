@@ -20,17 +20,7 @@ class Yolo implements Lolifier
         
     public function isHandling(array $record)
     {
-        $this->ensureLevelKeyExists($record);
-            
         return in_array($record['level'], $this->acceptedLevels);
-    }
-    
-    private function ensureLevelKeyExists(array $record)
-    {
-        if(! array_key_exists('level', $record))
-        {
-            throw new \RuntimeException('No level found in record');
-        }
     }
     
     public function lolify(array $record)

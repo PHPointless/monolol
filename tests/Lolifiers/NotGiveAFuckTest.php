@@ -66,14 +66,4 @@ class NotGiveAFuckTest extends \PHPUnit_Framework_TestCase
             ),
         );
     }
-
-    /**
-     * @expectedException \RuntimeException
-     */
-    public function testInvalidRecord()
-    {
-        $record = array();
-        
-        $this->notGiveAFuck->lolify($record);
-    }
 }

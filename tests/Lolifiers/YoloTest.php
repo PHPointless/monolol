@@ -44,14 +44,4 @@ class YoloTest extends \PHPUnit_Framework_TestCase
         
         $this->assertSame($record, $this->yolo->lolify($record));
     }
-    
-    /**
-     * @expectedException \RuntimeException
-     */
-    public function testInvalidRecord()
-    {
-        $record = array();
-        
-        $this->yolo->isHandling($record);
-    }
 }

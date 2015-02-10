@@ -51,14 +51,4 @@ class ConfuseTest extends \PHPUnit_Framework_TestCase
         
         return $providedTests;
     }
-    
-    /**
-     * @expectedException \RuntimeException
-     */
-    public function testInvalidRecord()
-    {
-        $record = array();
-        
-        $this->confuse->lolify($record);
-    }
 }

@@ -17,21 +17,11 @@ class NotGiveAFuck implements Lolifier
     
     public function lolify(array $record)
     {
-        $this->ensureLevelKeyExists($record);
-            
         if($record['level'] > Logger::INFO)
         {
             $record['message'] = self::MESSAGE;
         }
         
         return $record;
-    }
-    
-    private function ensureLevelKeyExists(array $record)
-    {
-        if(! array_key_exists('level', $record))
-        {
-            throw new \RuntimeException('No level found in record');
-        }
     }
 }

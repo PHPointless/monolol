@@ -17,18 +17,9 @@ class Warp implements Lolifier
     
     public function lolify(array $record)
     {
-        $this->ensureDateTimeKeyExists($record);
         $this->travelIntoWarp($record['datetime']);
         
         return $record;
-    }
-    
-    private function ensureDateTimeKeyExists(array $record)
-    {
-        if(! array_key_exists('datetime', $record))
-        {
-            throw new \RuntimeException('No datetime found in record');
-        }
     }
     
     private function travelIntoWarp(\DateTime $datetime)
