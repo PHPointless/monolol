@@ -2,7 +2,6 @@
 
 namespace Monolol\Lolifiers\QuoteProviders\Kaamelott;
 
-use Monolol\Lolifier;
 use Monolol\Lolifiers\QuoteProvider;
 
 class Gauvain implements QuoteProvider
