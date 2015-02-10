@@ -13,7 +13,7 @@ class HashTest extends \PHPUnit_Framework_TestCase
 
     public function testHash()
     {
-        $record = array('message' => 'my littlest pony', 'datetime' => new \DateTime());
+        $record = array('message' => 'my littlest pony');
 
         $lolifier = new Hash();
         $lolified = $lolifier->lolify($record);
