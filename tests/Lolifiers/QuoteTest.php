@@ -9,31 +9,9 @@ use Monolog\Logger;
 
 class QuoteTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     *
-     * @dataProvider providerTestHandling
-     */
-    public function testHandling($level)
+    public function testHandling()
     {
-        $record = array('level' => $level);
-
-        $lolifier = new Quote(new QuoteProviders\EmptyQuoteProvider());
-
-        $this->assertTrue($lolifier->isHandling($record));
-    }
-
-    public function providerTestHandling()
-    {
-        return array(
-            'debug' => array(Logger::DEBUG),
-            'info' => array(Logger::INFO),
-            'notice' => array(Logger::NOTICE),
-            'warning' => array(Logger::WARNING),
-            'error' => array(Logger::ERROR),
-            'critical' => array(Logger::CRITICAL),
-            'alert' => array(Logger::ALERT),
-            'emergency' => array(Logger::EMERGENCY),
-        );
+        $this->assertTrue((new Quote(new QuoteProviders\EmptyQuoteProvider()))->isHandling(array()));
     }
 
     /**
