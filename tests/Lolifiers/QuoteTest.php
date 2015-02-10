@@ -34,7 +34,7 @@ class QuoteTest extends \PHPUnit_Framework_TestCase
             'Perceval' => array(new QuoteProviders\Kaamelott\Perceval(), 'Internal Burger Error'),
             'Karadoc'  => array(new QuoteProviders\Kaamelott\Karadoc(), 'Internal Pony Error'),
             'Merlin'   => array(new QuoteProviders\Kaamelott\Merlin(), 'Internal Unicorn Error'),
-            'Kadoc'    => array(new QuoteProviders\Kaamelott\Merlin(), 'Internal Rabbit Error'),
+            'Kadoc'    => array(new QuoteProviders\Kaamelott\Kadoc(), 'Internal Rabbit Error'),
         );
     }
 }
