@@ -37,4 +37,17 @@ class QuoteTest extends \PHPUnit_Framework_TestCase
             'Kadoc'    => array(new QuoteProviders\Kaamelott\Kadoc(), 'Internal Rabbit Error'),
         );
     }
+
+    public function testEmptyQuotes()
+    {
+        $record = array('message' => 'Lorem ipsum dolor sit amet', 'datetime' => new \DateTime());
+
+        $provider = new QuoteProviders\EmptyQuoteProvider();
+
+        $lolifier = new Quote($provider);
+
+        $lolilfiedRecord = $lolifier->lolify($record);
+
+        $this->assertSame($lolilfiedRecord['message'], null);
+    }
 }

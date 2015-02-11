@@ -33,6 +33,11 @@ class Quote implements Lolifier
     {
         $quotes = $this->provider->getQuotes();
 
+        if(empty($quotes))
+        {
+            return null;
+        }
+
         return $quotes[array_rand($quotes)];
     }
 }
