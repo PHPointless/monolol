@@ -5,16 +5,16 @@ namespace Monolol\Lolifiers;
 class TouretteTest extends \PHPUnit_Framework_TestCase
 {
     private
-        $badWordsProvider;
+        $swearWordsProvider;
     
     protected function setUp()
     {
-        $this->badWordsProvider = new BadWordsProviders\DefaultProvider();
+        $this->swearWordsProvider = new SwearWordsProviders\DefaultProvider();
     }
     
     public function testHandling()
     {
-        $this->assertTrue((new Tourette($this->badWordsProvider))->isHandling(array()));
+        $this->assertTrue((new Tourette($this->swearWordsProvider))->isHandling(array()));
     }
 
     /**
@@ -24,14 +24,14 @@ class TouretteTest extends \PHPUnit_Framework_TestCase
     {
         $record = array('message' => $message);
 
-        $lolified = (new Tourette($this->badWordsProvider))->lolify($record);
+        $lolified = (new Tourette($this->swearWordsProvider))->lolify($record);
 
         $this->assertNotSame($message, $lolified['message']);
         
         $messageArray = explode(' ', $lolified['message']);
-        $badWordsFound = array_intersect($this->badWordsProvider->getBadWords(), $messageArray);
+        $swearWordsFound = array_intersect($this->swearWordsProvider->getSwearWords(), $messageArray);
         
-        $this->assertFalse(empty($badWordsFound));
+        $this->assertFalse(empty($swearWordsFound));
     }
 
     public function providerTestTourette()

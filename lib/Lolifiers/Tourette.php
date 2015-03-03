@@ -7,11 +7,11 @@ use Monolol\Lolifier;
 class Tourette implements Lolifier
 {
     private
-        $badWordsProvider;
+        $swearWordsProvider;
     
-    public function __construct(BadWordsProvider $badWordsProvider)
+    public function __construct(SwearWordsProvider $swearWordsProvider)
     {
-        $this->badWordsProvider = $badWordsProvider;
+        $this->swearWordsProvider = $swearWordsProvider;
     }
     
     public function isHandling(array $record)
@@ -22,13 +22,13 @@ class Tourette implements Lolifier
     public function lolify(array $record)
     {
         $messageArray = explode(' ', $record['message']);
-        $badWords = $this->badWordsProvider->getBadWords();
+        $badWords = $this->swearWordsProvider->getSwearWords();
         
         $iterations = rand(1, 3);
         for($i = 0; $i < $iterations; $i++)
         {
             $badWord = $this->chooseBadWordRandomly($badWords);
-            $this->insertBadWordIntoMessage($messageArray, $badWord);
+            $this->insertSwearWordIntoMessage($messageArray, $badWord);
         }
         
         $record['message'] = implode(' ', $messageArray);
@@ -43,7 +43,7 @@ class Tourette implements Lolifier
         return $badWords[$index];
     }
     
-    private function insertBadWordIntoMessage(array &$messageArray, $badWord)
+    private function insertSwearWordIntoMessage(array &$messageArray, $badWord)
     {
         array_splice($messageArray, rand(0, count($messageArray)), 0, $badWord);
     }

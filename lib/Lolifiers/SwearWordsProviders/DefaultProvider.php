@@ -1,12 +1,12 @@
 <?php
 
-namespace Monolol\Lolifiers\BadWordsProviders;
+namespace Monolol\Lolifiers\SwearWordsProviders;
 
-use Monolol\Lolifiers\BadWordsProvider;
+use Monolol\Lolifiers\SwearWordsProvider;
 
-class DefaultProvider implements BadWordsProvider
+class DefaultProvider implements SwearWordsProvider
 {
-    public function getBadWords()
+    public function getSwearWords()
     {
         return array(
             'BITCH',
