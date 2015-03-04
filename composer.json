@@ -1,5 +1,5 @@
 {
-    "name" : "monolol/monolol",
+    "name" : "PHPointless/monolol",
     "description" : "PSR-3 compliant lol-gger",
     "type" : "library",
     "authors" : [{
