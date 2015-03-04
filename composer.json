@@ -5,6 +5,10 @@
     "authors" : [{
             "name" : "Romain Renaud",
             "email" : "contact@romain-renaud.fr"
+        },
+        {
+            "name" : "Claude LE BRIS",
+            "email" : "claude.lebris@gmail.com"
         }
     ],
     "keywords" : [
