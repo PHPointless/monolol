@@ -61,13 +61,13 @@ AVAILABLE LOLIFIERS
 - _NotGiveAFuck_: message of records having loglevel above INFO will be replaced by the following string : "It seems that your application has encountered an issue. But as we don't give a fuck, we will not tell you what is the problem. Have a good day"
 - _Quote_: records message will be replaced by a quote randomly chosen. Quote Lolifier needs a QuoteProvider. Here's an example of how to use it :
 ```php
-$quoteProvider = new Lolifiers\QuoteProviders\Kaamelot\Cadoc();
+$quoteProvider = new Lolifiers\QuoteProviders\Kaamelot\Kadoc();
 $lolHandler = new LolHandler($streamHandler, new Lolifiers\Quote($quoteProvider));
 ```
 If you want quotes from more than one provider, you can use QuoteProviders\Collection
 ```php
 $quoteProvider = new Lolifiers\QuoteProviders\Collection();
-$quoteProvider->add(new Lolifiers\QuoteProviders\Kaamelot\Cadoc())
+$quoteProvider->add(new Lolifiers\QuoteProviders\Kaamelot\Kadoc())
               ->add(new Lolifiers\QuoteProviders\Kaamelot\Karadoc())
               ->add(new Lolifiers\QuoteProviders\Kaamelot\Perceval());
 $lolHandler = new LolHandler($streamHandler, new Lolifiers\Quote($quoteProvider));
