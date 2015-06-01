@@ -58,7 +58,7 @@ AVAILABLE LOLIFIERS
 - _Hash_: records message will be hashed with an algorithm randomly chosen
 - _LaMerNoire_: records message will be replaced by the following string : 'La mer Noire'
 - _Mirror_: records message content will be reversed (desrever eb lliw tnetnoc egassem sdrocer)
-- _NotGiveAFuck_: message of records having loglevel above INFO will be replaced by the following string : "It seems that your application has encountered an issue. But as we don't give a fuck, we will not tell you what is the problem. Have a good day"
+- _NotGiveAFuck_: message of records having loglevel above INFO will be replaced by the following string : "It seems that your application has encountered an issue. But as we don't give a fuck, we will not tell you what the problem is. Have a good day"
 - _Quote_: records message will be replaced by a quote randomly chosen. Quote Lolifier needs a QuoteProvider. Here's an example of how to use it :
 ```php
 $quoteProvider = new Lolifiers\QuoteProviders\Kaamelot\Cadoc();
