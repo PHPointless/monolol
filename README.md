@@ -11,13 +11,9 @@ QA
 
 INSTALLATION
 ------------
-Use composer :
-```json
-{
-    "require": {
-	      "PHPointless/monolol" : "~1.0"
-    }
-}
+Use composer:
+```sh
+composer require PHPointless/monolol
 ```
 
 HOW TO USE IT
