@@ -34,7 +34,7 @@ use Monolol\Handlers\LolHandler;
 use Monolol\Lolifiers;
 
 $logger = new Logger('myLog');
-$streamHandler = new StreamHandler(__DIR__ . 'monolol.log');
+$streamHandler = new StreamHandler(__DIR__ . '/monolol.log');
 
 $lolHandler = new LolHandler($streamHandler, new Lolifiers\Shuffle());
 
