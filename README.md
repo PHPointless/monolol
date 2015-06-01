@@ -73,6 +73,6 @@ $lolHandler = new LolHandler($streamHandler, new Lolifiers\Quote($quoteProvider)
 - _Yolo_: "An error? What are you talking about? There was no error!". All records having loglevel above INFO will not be handled
 - _Tourette_: Monolog is suffering a Tourette's syndrom. This lolifier needs a SwearWordsProvider. Here's an example of how to use it :
 ```php
-$swearWordsProvider = new Lolifiers\Lolifiers\SwearWordsProviders\DefaultProvider();
+$swearWordsProvider = new Lolifiers\SwearWordsProviders\DefaultProvider();
 $lolHandler = new LolHandler($streamHandler, new Lolifiers\Tourette($swearWordsProvider));
 ```
