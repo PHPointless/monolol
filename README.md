@@ -6,8 +6,9 @@ PSR-3 compliant lol-gger
 QA
 --
 
-[![Build Status](https://travis-ci.org/devwebpeanuts/monolol.svg?branch=master)](https://travis-ci.org/devwebpeanuts/monolol)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/devwebpeanuts/monolol/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/devwebpeanuts/monolol/?branch=master)
+[![Build Status](https://travis-ci.org/PHPointless/monolol.svg)](https://travis-ci.org/PHPointless/monolol)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PHPointless/monolol/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PHPointless/monolol/?branch=master)
+[![Scrutinizer Code Coverage](https://scrutinizer-ci.com/g/PHPointless/monolol/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/PHPointless/monolol/?branch=master)
 
 INSTALLATION
 ------------
