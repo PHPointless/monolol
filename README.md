@@ -55,6 +55,7 @@ AVAILABLE LOLIFIERS
 - _LaMerNoire_: Messages will be replaced by the following string: 'La mer Noire'
 - _Mirror_: Messages' content will be reversed (desrever eb lliw tnetnoc egassem sdrocer)
 - _NotGiveAFuck_: Messages having loglevel above INFO will be replaced by the following string: "It seems that your application has encountered an issue. But as we don't give a fuck, we will not tell you what the problem is. Have a good day"
+- _NyanCat_: Nya nya nya nya nya nya nya nya nya nya nya!
 - _Quote_: Messages will be replaced by a quote randomly chosen. Quote Lolifier needs a QuoteProvider. Here's an example of how to use it:
 ```php
 $quoteProvider = new Lolifiers\QuoteProviders\Kaamelott\Kadoc();
