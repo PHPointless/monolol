@@ -5,6 +5,7 @@ PSR-3 compliant lol-gger
 
 QA
 --
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/dbeb0236-21a3-49be-9ee3-1585be6e1073/big.png)](https://insight.sensiolabs.com/projects/dbeb0236-21a3-49be-9ee3-1585be6e1073)
 
 [![Build Status](https://travis-ci.org/PHPointless/monolol.svg)](https://travis-ci.org/PHPointless/monolol)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PHPointless/monolol/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PHPointless/monolol/?branch=master)
