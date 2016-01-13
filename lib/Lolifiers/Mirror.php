@@ -3,7 +3,6 @@
 namespace Monolol\Lolifiers;
 
 use Monolol\Lolifier;
-use Monolol\Referentials\MonologLevel;
 
 class Mirror implements Lolifier
 {

@@ -3,7 +3,6 @@
 namespace Monolol\Lolifiers;
 
 use Monolol\Lolifier;
-use Monolog\Logger;
 
 class Hash implements Lolifier
 {
